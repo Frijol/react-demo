@@ -4,15 +4,17 @@ const jsContainer = document.getElementById("js");
 jsContainer.innerHTML = `
   <div class="demo">
     Hello JS
+    <input />
   </div>
 `;
 
 const reactContainer = document.getElementById("react");
 ReactDOM.render(
   React.createElement(
-    "div",
+    "div", // What kind of element to get
     { className: "demo" },
-    "Hello React"
+    "Hello React",
+    React.createElement("input")
   ),
-  reactContainer
+  reactContainer // Which element to get
 );
