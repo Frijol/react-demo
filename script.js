@@ -5,6 +5,7 @@ jsContainer.innerHTML = `
   <div class="demo">
     Hello JS
     <input />
+    <p>${new Date()}</p>
   </div>
 `;
 
@@ -14,7 +15,12 @@ ReactDOM.render(
     "div", // What kind of element to get
     { className: "demo" },
     "Hello React",
-    React.createElement("input")
+    React.createElement("input"),
+    React.createElement(
+      "p",
+      null,
+      new Date().toString()
+    )
   ),
   reactContainer // Which element to get
 );
